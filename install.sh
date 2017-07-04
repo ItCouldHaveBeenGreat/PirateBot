@@ -23,7 +23,7 @@ tar -xvzf scala-2.12.2.tgz
 rm scala-2.12.2.tgz*
 
 # pull down repositories
-rm -rf Rutsubo
+sudo rm -rf Rutsubo
 rm -rf Eyepatch
 
 git clone https://github.com/ItCouldHaveBeenGreat/Rutsubo.git
@@ -32,10 +32,8 @@ git clone https://github.com/ItCouldHaveBeenGreat/Eyepatch.git
 # rutsubo setup
 virtualenv Rutsubo
 source Rutsubo/bin/activate
-cd Rutsubo
-pip install --upgrade pip
-# why aren't these in requirements.txt?
-sudo pip install -r requirements.txt
+sudo Rutsubo/bin/pip install --upgrade pip
+sudo Rutsubo/bin/pip install -r Rutsubo/requirements.txt 
 
 # eyepatch setup
 cd ~/Eyepatch
